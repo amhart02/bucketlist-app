@@ -1,0 +1,16 @@
+{
+  "name": "Bucket List App",
+  "short_name": "Bucket List",
+  "description": "Create, manage, and track your personal bucket lists",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
