@@ -71,18 +71,21 @@ export default function BucketListCard({ list, onDeleted }: BucketListCardProps)
             <span>{list.completionPercentage}%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
-            <div
-              className="bg-blue-600 h-2 rounded-full transition-all"
-              style={{ width: `${list.completionPercentage}%` }}
-            ></div>
+            {list.completionPercentage > 0 && list.itemCount > 0 && (
+              <div
+                className="bg-blue-600 h-2 rounded-full transition-all"
+                style={{ width: `${list.completionPercentage}%` }}
+              ></div>
+            )}
           </div>
           <div className="text-sm text-gray-600">
-            {list.completedCount} of {list.itemCount} completed
+            <span className="text-green-600 font-semibold">{list.completedCount}</span> of <span className="font-semibold text-gray-700">{list.itemCount}</span> items
           </div>
         </div>
 
-        <div className="mt-4 pt-4 border-t border-gray-100 text-xs text-gray-500">
-          Created {new Date(list.createdAt).toLocaleDateString()}
+        <div className="mt-4 pt-4 border-t border-gray-100 flex justify-between text-xs text-gray-500">
+          <span>Created {new Date(list.createdAt).toLocaleDateString()}</span>
+          <span>Last updated {new Date(list.lastActivityAt).toLocaleDateString()}</span>
         </div>
       </div>
 

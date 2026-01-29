@@ -153,7 +153,7 @@ export default function ListDetailClient({ listId }: { listId: string }) {
           <p className="text-red-800 font-medium mb-2">{error}</p>
           <Link
             href="/dashboard"
-            className="text-blue-600 hover:text-blue-800 underline"
+            className="text-blue-600 hover:text-blue-600 underline"
           >
             Back to Dashboard
           </Link>
@@ -175,7 +175,7 @@ export default function ListDetailClient({ listId }: { listId: string }) {
       <div className="mb-8">
         <Link
           href="/dashboard"
-          className="text-blue-600 hover:text-blue-800 mb-4 inline-block"
+          className="text-blue-600 hover:text-blue-600 mb-4 inline-block"
         >
           ← Back to Dashboard
         </Link>

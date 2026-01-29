@@ -9,6 +9,7 @@ import IdeasGrid from "@/components/library/IdeasGrid";
 import AddToListModal from "@/components/library/AddToListModal";
 import Pagination from "@/components/library/Pagination";
 import LibrarySkeleton from "@/components/library/LibrarySkeleton";
+import { ToastProvider } from "@/components/ui/Toast";
 
 interface Category {
   _id: string;
@@ -119,19 +120,19 @@ export default function LibraryPage() {
   };
 
   const handleModalSuccess = () => {
-    alert("Idea added to your list!");
     // Optionally refresh ideas to update usage count
     fetchIdeas();
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto p-6">
+    <ToastProvider>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto p-6">
         {/* Header */}
         <div className="mb-8">
           <Link
             href="/dashboard"
-            className="text-blue-600 hover:text-blue-800 mb-4 inline-block"
+            className="text-blue-600 hover:text-blue-600 mb-4 inline-block"
           >
             ← Back to Dashboard
           </Link>
@@ -180,5 +181,6 @@ export default function LibraryPage() {
         />
       </div>
     </div>
+    </ToastProvider>
   );
 }

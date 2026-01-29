@@ -30,17 +30,24 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gradient-to-b from-white to-gray-50">
       <main className="max-w-4xl mx-auto text-center space-y-8">
-        <h1 className="text-5xl font-bold text-gray-900">
-          Create Your Bucket List
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl">
+        <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div className="w-3 h-3 rounded-full bg-blue-600"></div>
+          </div>
+          <h1 className="text-5xl font-bold text-gray-900">
+            Bucket List
+          </h1>
+        </div>
+        <p className="text-xl text-gray-600 max-w-xl mx-auto">
           Document your life goals and dreams. Track your progress. Get inspired by our library of ideas.
         </p>
         
         <div className="flex gap-4 items-center justify-center">
           <Link
             href="/register"
-            className="rounded-lg bg-blue-600 text-white px-8 py-3 text-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="rounded-lg bg-blue-600 text-white px-8 py-3 text-lg font-semibold hover:bg-blue-600 transition-colors"
           >
             Get Started
           </Link>
@@ -52,7 +59,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
           <div className="p-6 border rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Create Multiple Lists</h3>
             <p className="text-gray-600">

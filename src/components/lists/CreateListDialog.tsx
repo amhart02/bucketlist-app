@@ -78,7 +78,7 @@ export default function CreateListDialog({ onClose, onCreated }: CreateListDialo
               value={name}
               onChange={(e) => setName(e.target.value)}
               disabled={isLoading}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent disabled:bg-gray-100"
               placeholder="e.g., Travel Goals, Books to Read"
               autoFocus
               maxLength={100}
@@ -98,7 +98,7 @@ export default function CreateListDialog({ onClose, onCreated }: CreateListDialo
             <button
               type="submit"
               disabled={isLoading}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors disabled:bg-blue-400 font-semibold"
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-600 transition-colors disabled:bg-blue-400 font-semibold"
             >
               {isLoading ? "Creating..." : "Create List"}
             </button>

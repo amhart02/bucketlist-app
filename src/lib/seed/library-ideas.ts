@@ -14,11 +14,11 @@ export async function seedLibraryIdeas() {
 
     // Create categories
     const categories = await Category.create([
-      { name: "Travel & Adventure", slug: "travel-adventure", order: 1, iconUrl: "🌍" },
-      { name: "Learning & Skills", slug: "learning-skills", order: 2, iconUrl: "📚" },
-      { name: "Health & Fitness", slug: "health-fitness", order: 3, iconUrl: "💪" },
-      { name: "Creative & Arts", slug: "creative-arts", order: 4, iconUrl: "🎨" },
-      { name: "Experiences & Events", slug: "experiences-events", order: 5, iconUrl: "🎭" },
+      { name: "Travel & Adventure", slug: "travel-adventure", order: 1},
+      { name: "Learning & Skills", slug: "learning-skills", order: 2},
+      { name: "Health & Fitness", slug: "health-fitness", order: 3 },
+      { name: "Creative & Arts", slug: "creative-arts", order: 4 },
+      { name: "Experiences & Events", slug: "experiences-events", order: 5 },
     ]);
 
     console.log(`✓ Created ${categories.length} categories`);

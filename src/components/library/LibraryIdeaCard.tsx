@@ -25,7 +25,7 @@ export default function LibraryIdeaCard({
         </h3>
         <button
           onClick={() => onAddToList(idea)}
-          className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 transition-colors flex-shrink-0"
+          className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-600 transition-colors flex-shrink-0"
         >
           + Add
         </button>
@@ -43,7 +43,7 @@ export default function LibraryIdeaCard({
               key={tag}
               className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
             >
-              #{tag}
+              {tag}
             </span>
           ))}
         </div>

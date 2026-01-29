@@ -40,7 +40,7 @@ export default function BucketListItemCard({
         checked={item.isCompleted}
         onChange={handleToggle}
         disabled={isToggling}
-        className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500 cursor-pointer disabled:cursor-wait"
+        className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-600 cursor-pointer disabled:cursor-wait"
       />
 
       {/* Text */}
@@ -58,7 +58,7 @@ export default function BucketListItemCard({
       <div className="flex gap-2">
         <button
           onClick={() => onEdit(item)}
-          className="text-sm text-blue-600 hover:text-blue-700 px-3 py-1 hover:bg-blue-50 rounded"
+          className="text-sm text-blue-600 hover:text-blue-600 px-3 py-1 hover:bg-blue-50 rounded"
         >
           Edit
         </button>

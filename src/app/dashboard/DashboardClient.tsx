@@ -9,7 +9,6 @@ import CreateListButton from "@/components/lists/CreateListButton";
 import EmptyListsState from "@/components/lists/EmptyListsState";
 import BucketListSkeleton from "@/components/lists/BucketListSkeleton";
 import OverallProgress from "@/components/dashboard/OverallProgress";
-import ActivityReminder from "@/components/dashboard/ActivityReminder";
 
 interface BucketList {
   _id: string;
@@ -105,9 +104,9 @@ export default function DashboardClient() {
           <div className="flex gap-3">
             <Link
               href="/library"
-              className="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+              className="px-4 py-4 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
-              📚 Browse Ideas
+              Browse Ideas
             </Link>
             <CreateListButton onListCreated={handleListCreated} />
           </div>
@@ -118,11 +117,6 @@ export default function DashboardClient() {
           <div className="mb-8">
             <OverallProgress />
           </div>
-        )}
-
-        {/* Activity Reminders */}
-        {lists.length > 0 && (
-          <ActivityReminder lists={lists} />
         )}
 
         {lists.length === 0 ? (

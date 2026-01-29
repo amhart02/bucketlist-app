@@ -29,10 +29,12 @@ export default function ProgressBar({
   return (
     <div className="w-full">
       <div className={`w-full bg-gray-200 rounded-full ${heightClasses[size]} overflow-hidden`}>
-        <div
-          className={`${getColor(clampedPercentage)} ${heightClasses[size]} rounded-full transition-all duration-300`}
-          style={{ width: `${clampedPercentage}%` }}
-        ></div>
+        {clampedPercentage > 0 && (
+          <div
+            className={`${getColor(clampedPercentage)} ${heightClasses[size]} rounded-full transition-all duration-300`}
+            style={{ width: `${clampedPercentage}%` }}
+          ></div>
+        )}
       </div>
       {showLabel && (
         <p className="text-xs text-gray-600 mt-1 text-right">

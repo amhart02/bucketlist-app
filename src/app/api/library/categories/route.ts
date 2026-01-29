@@ -12,7 +12,7 @@ export async function GET() {
 
     const categories = await Category.find()
       .sort({ order: 1 })
-      .select("_id name slug iconUrl description order")
+      .select("_id name slug description order")
       .lean();
 
     const response = NextResponse.json({ categories }, { status: 200 });

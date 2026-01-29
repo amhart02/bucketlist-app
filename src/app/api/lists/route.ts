@@ -17,7 +17,13 @@ export async function GET() {
       .sort({ createdAt: -1 })
       .lean();
 
-    return NextResponse.json({ lists });
+    // Calculate completionPercentage for each list since .lean() doesn't include virtuals
+    const listsWithPercentage = lists.map(list => ({
+      ...list,
+      completionPercentage: list.itemCount === 0 ? 0 : Math.round((list.completedCount / list.itemCount) * 100)
+    }));
+
+    return NextResponse.json({ lists: listsWithPercentage });
   } catch (error) {
     logger.error('Failed to fetch lists', error, { userId: (session.user as any).id });
     return NextResponse.json(

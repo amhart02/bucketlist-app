@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
+import NotificationBell from "../layout/NotificationBell";
 
 export default function AuthNav() {
   const { data: session, status } = useSession();
@@ -19,6 +20,7 @@ export default function AuthNav() {
   if (status === "authenticated" && session && session.user && session.user.email) {
     return (
       <div className="flex items-center gap-4">
+        <NotificationBell />
         <span className="text-sm text-gray-700">{session.user.email}</span>
         <button
           onClick={() => signOut({ callbackUrl: "/" })}
@@ -41,7 +43,7 @@ export default function AuthNav() {
       </Link>
       <Link
         href="/register"
-        className="text-sm bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 font-medium"
+        className="text-sm bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 font-medium"
       >
         Sign Up
       </Link>

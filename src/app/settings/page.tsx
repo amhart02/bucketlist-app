@@ -85,7 +85,7 @@ export default function SettingsPage() {
         <div className="mb-8">
           <Link
             href="/dashboard"
-            className="text-blue-600 hover:text-blue-800 mb-4 inline-block"
+            className="text-blue-600 hover:text-blue-600 mb-4 inline-block"
           >
             ← Back to Dashboard
           </Link>
@@ -114,7 +114,7 @@ export default function SettingsPage() {
               onClick={() =>
                 setActivityRemindersEnabled(!activityRemindersEnabled)
               }
-              className={`ml-4 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+              className={`ml-4 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 ${
                 activityRemindersEnabled ? "bg-blue-600" : "bg-gray-200"
               }`}
               role="switch"
@@ -133,7 +133,7 @@ export default function SettingsPage() {
             <button
               onClick={handleSave}
               disabled={saving}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {saving ? "Saving..." : "Save Settings"}
             </button>

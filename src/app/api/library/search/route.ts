@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
       .skip(skip)
       .limit(limit)
       .select("_id title description tags usageCount categoryId")
-      .populate("categoryId", "name slug iconUrl")
+      .populate("categoryId", "name slug")
       .lean();
 
     // Get total count for pagination

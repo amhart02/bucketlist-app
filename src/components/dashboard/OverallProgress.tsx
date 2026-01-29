@@ -57,23 +57,23 @@ export default function OverallProgress() {
   if (!stats) return null;
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow p-6 border border-blue-100">
+    <div className="bg-white rounded-lg shadow p-6 border border-gray-200">
       <h2 className="text-xl font-bold text-gray-900 mb-4">Overall Progress</h2>
       
       <div className="space-y-4">
         {/* Stats Grid */}
         <div className="grid grid-cols-3 gap-4">
-          <div className="text-center">
+          <div className="text-center p-3 bg-blue-50 rounded-lg">
             <p className="text-3xl font-bold text-blue-600">{stats.totalLists}</p>
-            <p className="text-sm text-gray-600">Lists</p>
+            <p className="text-sm text-gray-600 mt-1">Lists</p>
           </div>
-          <div className="text-center">
+          <div className="text-center p-3 bg-green-50 rounded-lg">
             <p className="text-3xl font-bold text-green-600">{stats.completedItems}</p>
-            <p className="text-sm text-gray-600">Completed</p>
+            <p className="text-sm text-gray-600 mt-1">Completed</p>
           </div>
-          <div className="text-center">
-            <p className="text-3xl font-bold text-purple-600">{stats.totalItems}</p>
-            <p className="text-sm text-gray-600">Total Items</p>
+          <div className="text-center p-3 bg-gray-50 rounded-lg">
+            <p className="text-3xl font-bold text-gray-700">{stats.totalItems}</p>
+            <p className="text-sm text-gray-600 mt-1">Total Items</p>
           </div>
         </div>
 
@@ -82,11 +82,11 @@ export default function OverallProgress() {
           <div>
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm font-medium text-gray-700">Overall Completion</span>
-              <span className="text-sm font-bold text-blue-600">{stats.completionPercentage}%</span>
+              <span className="text-sm font-bold text-gray-900">{stats.completionPercentage}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3">
               <div
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 h-3 rounded-full transition-all duration-300"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-300"
                 style={{ width: `${stats.completionPercentage}%` }}
               ></div>
             </div>
@@ -100,8 +100,8 @@ export default function OverallProgress() {
           </p>
         )}
         {stats.totalItems > 0 && stats.completionPercentage === 100 && (
-          <p className="text-sm text-green-600 text-center py-2 font-semibold">
-            🎉 Amazing! You've completed everything!
+          <p className="text-md text-blue-600 text-center py-2 font-semibold">
+            Amazing! You've completed everything!
           </p>
         )}
         {stats.totalItems > 0 && stats.completionPercentage > 0 && stats.completionPercentage < 100 && (

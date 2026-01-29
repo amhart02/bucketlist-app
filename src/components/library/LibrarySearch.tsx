@@ -37,7 +37,7 @@ export default function LibrarySearch({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search ideas by keyword or tag..."
-          className="w-full px-4 py-3 pl-11 pr-11 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-3 pl-11 pr-11 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
         />
         {/* Search Icon */}
         <svg

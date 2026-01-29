@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import AuthProvider from "@/components/auth/AuthProvider";
-import AuthNav from "@/components/auth/AuthNav";
+import ConditionalNav from "@/components/layout/ConditionalNav";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -48,18 +49,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AuthProvider>
-          <nav className="border-b bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between items-center h-16">
-                <div className="flex items-center">
-                  <a href="/" className="text-xl font-bold text-gray-900">
-                    Bucket List
-                  </a>
-                </div>
-                <AuthNav />
-              </div>
-            </div>
-          </nav>
+          <ConditionalNav />
           {children}
         </AuthProvider>
       </body>
