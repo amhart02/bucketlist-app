@@ -5,6 +5,8 @@ import { requireAuth } from "@/lib/auth/middleware";
 import { CreateBucketListSchema } from "@/lib/validation/schemas";
 import { logger } from "@/lib/utils/logger";
 
+export const dynamic = 'force-dynamic';
+
 // GET /api/lists - Get all lists for authenticated user
 export async function GET() {
   const session = await requireAuth();

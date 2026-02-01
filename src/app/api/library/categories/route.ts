@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db/mongodb";
 import Category from "@/models/Category";
 
+export const dynamic = 'force-dynamic';
+
 /**
  * GET /api/library/categories
  * Fetch all categories ordered by order field

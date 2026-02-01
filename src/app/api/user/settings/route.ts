@@ -1,11 +1,13 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "@/lib/db/mongodb";
 import User from "@/models/User";
 import { requireAuth } from "@/lib/auth/middleware";
 
+export const dynamic = 'force-dynamic';
+
 /**
  * GET /api/user/settings
- * Fetch user settings
+ * Get user settings
  */
 export async function GET() {
   const session = await requireAuth();

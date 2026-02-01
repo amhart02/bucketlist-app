@@ -6,6 +6,8 @@ import { requireAuth } from "@/lib/auth/middleware";
 import { UpdateBucketListSchema } from "@/lib/validation/schemas";
 import mongoose from "mongoose";
 
+export const dynamic = 'force-dynamic';
+
 // GET /api/lists/[id] - Get single list with items
 export async function GET(
   request: NextRequest,

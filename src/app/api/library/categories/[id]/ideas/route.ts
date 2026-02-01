@@ -3,6 +3,8 @@ import dbConnect from "@/lib/db/mongodb";
 import LibraryIdea from "@/models/LibraryIdea";
 import Category from "@/models/Category";
 
+export const dynamic = 'force-dynamic';
+
 /**
  * GET /api/library/categories/[id]/ideas
  * Fetch ideas for a specific category with pagination

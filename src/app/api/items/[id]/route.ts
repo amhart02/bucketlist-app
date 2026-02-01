@@ -5,6 +5,8 @@ import BucketListItem from "@/models/BucketListItem";
 import { requireAuth } from "@/lib/auth/middleware";
 import { UpdateItemSchema } from "@/lib/validation/schemas";
 
+export const dynamic = 'force-dynamic';
+
 // PATCH /api/items/[id] - Update item text or completion status
 export async function PATCH(
   request: NextRequest,

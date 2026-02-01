@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "@/lib/db/mongodb";
 import LibraryIdea from "@/models/LibraryIdea";
 
+export const dynamic = 'force-dynamic';
+
 /**
  * GET /api/library/search?q=keyword&page=1&limit=20
  * Search library ideas by keyword

@@ -4,9 +4,11 @@ import BucketList from "@/models/BucketList";
 import BucketListItem from "@/models/BucketListItem";
 import LibraryIdea from "@/models/LibraryIdea";
 import { requireAuth } from "@/lib/auth/middleware";
-import { CreateItemSchema } from "@/lib/validation/schemas";
+import { CreateBucketListItemSchema } from "@/lib/validation/schemas";
 
-// POST /api/lists/[id]/items - Add item to list
+export const dynamic = 'force-dynamic';
+
+// POST /api/lists/:id/items - Add item to list
 export async function POST(
   request: NextRequest,
   { params }: { params: { id: string } }
