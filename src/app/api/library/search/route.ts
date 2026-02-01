@@ -3,6 +3,7 @@ import dbConnect from "@/lib/db/mongodb";
 import LibraryIdea from "@/models/LibraryIdea";
 
 export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 /**
  * GET /api/library/search?q=keyword&page=1&limit=20
@@ -12,7 +13,8 @@ export async function GET(request: NextRequest) {
   try {
     await dbConnect();
 
-    const searchParams = request.nextUrl.searchParams;
+    // Extract search params outside of any async operations
+    const { searchParams } = request.nextUrl;
     const query = searchParams.get("q") || "";
     const page = parseInt(searchParams.get("page") || "1");
     const limit = parseInt(searchParams.get("limit") || "20");
